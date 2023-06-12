@@ -48,6 +48,10 @@
   <remote  name="gitlab"
            fetch="https://gitlab.com" />
 
+  <remote  name="aospa-gm"
+           fetch="https://github.com/pa-gm"
+           revision="topaz" />
+
   <include name="aosp.xml"/>
   <include name="aospa.xml"/>
   <include name="obsolete.xml"/>
