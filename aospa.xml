@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <!-- Aperture -->
+  <project path="packages/apps/Aperture" name="LineageOS/android_packages_apps_Aperture" revision="lineage-20.0" remote="github" />
+
   <!-- Build and Core -->
   <remove-project name="platform/art" />
   <project path="art" name="AOSPA/android_art" remote="aospa" />
@@ -9,7 +12,7 @@
   <remove-project name="platform/build/blueprint" />
   <project path="build/blueprint" name="AOSPA/android_build_blueprint" remote="aospa" />
   <remove-project name="platform/build_repo" />
-  <project path="build/make" name="AOSPA/android_build" remote="aospa" >
+  <project path="build/make" name="build" remote="aospa-gm" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
@@ -76,9 +79,9 @@
 
   <!-- Frameworks -->
   <remove-project name="platform/frameworks/av" />
-  <project path="frameworks/av" name="AOSPA/android_frameworks_av" remote="aospa" />
+  <project path="frameworks/av" name="frameworks_av" remote="aospa-gm" />
   <remove-project name="platform/frameworks/base" />
-  <project path="frameworks/base" name="AOSPA/android_frameworks_base" remote="aospa" />
+  <project path="frameworks/base" name="frameworks_base" remote="aospa-gm" />
   <remove-project name="platform/frameworks/libs/systemui" />
   <project path="frameworks/libs/systemui" name="AOSPA/android_frameworks_libs_systemui" remote="aospa" />
   <remove-project name="platform/frameworks/native" />
@@ -108,25 +111,25 @@
   <project path="kernel/configs" name="AOSPA/android_kernel_configs" remote="aospa" />
 
   <!-- Manifest -->
-  <project path="manifest" name="AOSPA/manifest" remote="aospa" />
+  <project path="manifest" name="manifest" remote="aospa-gm" />
 
   <!-- Packages (AOSPA) -->
   <project path="packages/apps/ParanoidDoze" name="AOSPA/android_packages_apps_ParanoidDoze" remote="aospa" />
   <project path="packages/apps/ParanoidHub" name="AOSPA/android_packages_apps_ParanoidHub" remote="aospa" revision="main" />
   <project path="packages/apps/ParanoidPapers" name="AOSPA/android_packages_apps_ParanoidPapers" remote="aospa" />
   <project path="packages/apps/ParanoidSense" name="AOSPA/android_packages_apps_ParanoidSense" remote="aospa" />
-  <project path="packages/apps/Paranoid/SystemUI" name="AOSPA/android_packages_apps_Paranoid_SystemUI" remote="aospa" />
+  <project path="packages/apps/Paranoid/SystemUI" name="packages_apps_Paranoid_SystemUI" remote="aospa-gm" />
   <project path="packages/resources/devicesettings" name="AOSPA/android_packages_resources_devicesettings" remote="aospa" />
 
   <!-- Packages -->
   <remove-project name="platform/packages/apps/CarrierConfig" />
   <project path="packages/apps/CarrierConfig" name="AOSPA/android_packages_apps_CarrierConfig" remote="aospa" />
   <remove-project name="platform/packages/apps/Launcher3" />
-  <project path="packages/apps/Launcher3" name="AOSPA/android_packages_apps_Launcher3" remote="aospa" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="aospa-gm" />
   <remove-project name="platform/packages/apps/Nfc" />
   <project path="packages/apps/Nfc" name="AOSPA/android_packages_apps_Nfc" remote="aospa" />
   <remove-project name="platform/packages/apps/Settings" />
-  <project path="packages/apps/Settings" name="AOSPA/android_packages_apps_Settings" remote="aospa" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="aospa-gm" />
   <remove-project name="platform/packages/apps/WallpaperPicker2" />
   <project path="packages/apps/WallpaperPicker2" name="AOSPA/android_packages_apps_WallpaperPicker2" remote="aospa" />
   <remove-project name="platform/packages/modules/Bluetooth" />
@@ -147,6 +150,9 @@
   <project path="packages/services/Telecomm" name="AOSPA/android_packages_services_Telecomm" remote="aospa" />
   <remove-project name="platform/packages/services/Telephony" />
   <project path="packages/services/Telephony" name="AOSPA/android_packages_services_Telephony" remote="aospa" />
+
+  <!-- GameSpace (Chaldeaprjkt) -->
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="aospa-gm" />
 
   <!-- Prebuilts (AOSPA) -->
   <project path="prebuilts/extract-tools" name="AOSPA/android_prebuilts_extract-tools" remote="aospa" />
@@ -180,14 +186,14 @@
   <project path="tools/extract-utils" name="AOSPA/android_tools_extract-utils" remote="aospa" />
 
   <!-- Vendor (AOSPA) -->
-  <project path="vendor/aospa" name="AOSPA/android_vendor_aospa" remote="aospa" >
+  <project path="vendor/aospa" name="vendor_aospa" remote="aospa-gm" >
     <linkfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="vendor/aospa/apps/ParanoidThemePicker" name="AOSPA/vendor_aospa_apps_ParanoidThemePicker" remote="aospa" />
   <project path="vendor/aospa/prebuilt" name="android_vendor_aospa_prebuilt" remote="blobs-gitlab" />
   <project path="vendor/aospa/translations" name="AOSPA/android_vendor_aospa_translations" remote="aospa" />
   <project path="vendor/google/gms" name="android_vendor_google_gms" remote="blobs-gitlab" />
-  <project path="vendor/google/pixel" name="android_vendor_google_pixel" remote="blobs" />
+  <project path="vendor/google/pixel" name="vendor_google_pixel" remote="aospa-gm" />
   <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="blobs" />
   <project path="vendor/qcom/sdclang" name="proprietary_vendor_qcom_sdclang" remote="blobs" revision="disabled" />
 
