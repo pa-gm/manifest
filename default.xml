@@ -38,6 +38,10 @@
            fetch="https://gitlab.com/ThankYouMario"
            revision="uvite" />
 
+  <remote  name="aospa-gm"
+           fetch="https://github.com/pa-gm"
+           revision="uvite" />
+
   <remote  name="github"
            fetch="https://github.com" />
 
@@ -48,6 +52,7 @@
            fetch="https://gitlab.com" />
 
   <include name="aosp.xml"/>
+  <include name="aospa-gm.xml"/>
   <include name="aospa.xml"/>
   <include name="obsolete.xml"/>
 
